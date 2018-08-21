@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import AppFrame from '../components/AppFrame';
-import { getCustomerByDni, getCustomers } from '../selectors/customers';
+import { getCustomerByDni } from "./../selectors/customers";
 
 class CustomerContainer extends Component {
   
@@ -19,9 +19,11 @@ class CustomerContainer extends Component {
 
 CustomerContainer.propTypes = {
   dni: PropTypes.string.isRequired,
-  customer: PropTypes.object,
+  customer: PropTypes.object.isRequired
 };
-
+CustomerContainer.defaultProps = {
+  customer: {}
+};
 const mapStateToProps = (state, props) => ({
   customer: getCustomerByDni(state, props),
 });

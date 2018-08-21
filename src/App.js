@@ -14,7 +14,6 @@ class App extends Component {
 
   renderCustomerListContainer = () => <h3>Customer List Container</h3>;
 
-  renderCustomerNewContainer = () => <CustomerContainer />;
   render() {
     return (
       <Router>
@@ -24,7 +23,7 @@ class App extends Component {
             <Switch>
               <Route path="/customers/new" component={this.renderCustomerNewContainer} />
               <Route path="/customers/:dni" 
-                render={props => <CustomerContainer  {...props} dni={props.match.params.dni}/>} />
+                render={props => <CustomerContainer dni={props.match.params.dni}/>} />
             </Switch>
           </div>
       </Router>

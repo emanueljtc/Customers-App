@@ -44,9 +44,7 @@ CustomersContainers.propTypes = {
 };
 
 CustomersContainers.defaultProps = {
-  customers: [
-    
-  ]
+  customers: []
 };
 
 const mapStateToProps = state => ({
