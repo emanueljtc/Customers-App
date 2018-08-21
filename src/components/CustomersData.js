@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const CustomersData = ({name, dni, age }) => {
    return (
      <div>
-          <div class="customer-data">
+          <div className="customer-data">
             <h2>Datos del Cliente</h2>
               <div><strong>Nombre</strong><i>{name}</i></div>
               <div><strong>DNI</strong><i>{dni}</i></div>

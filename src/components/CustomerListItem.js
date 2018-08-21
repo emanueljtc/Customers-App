@@ -22,7 +22,7 @@ const CustomerListItem = ({name, editAction, delAction, urlPath, dni}) => {
 };
 
 CustomerListItem.propTypes = {
-  dni: PropTypes.number.isRequired,
+  dni: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   editAction: PropTypes.string.isRequired,
   delAction: PropTypes.string.isRequired,
